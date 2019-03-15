@@ -5,11 +5,13 @@ public class Member {
 	private String id;
 	private String name;
 	private String telephone;
+	private String photo;
 
-	public Member(String id, String name, String telephone) {
+	public Member(String id, String name, String telephone, String photo) {
 		this.id = id;
 		this.name = name;
 		this.telephone = telephone;
+		this.photo = photo;
 	}
 
 
@@ -24,7 +26,13 @@ public class Member {
 	public String getName() {
 		return name;
 	}
-
+	public void setPhoto(String photo) {
+		this.photo = photo;
+	}
+	
+	public String getPhoto() {
+		return photo;
+	}
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -39,7 +47,7 @@ public class Member {
 	
 	public Member clone()
 	{
-		return new Member(id,name,telephone);
+		return new Member(id,name,telephone,photo);
 	}
 
 

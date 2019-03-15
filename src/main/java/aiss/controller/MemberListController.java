@@ -3,6 +3,7 @@ package aiss.controller;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -29,8 +30,8 @@ public class MemberListController extends HttpServlet {
 		
 		// Load contacts
 		MemberRepository repository = MemberRepository.getInstance();
-		Map<String,Member> members = repository.getMembers();
-		
+		Map<String,Member> uo = repository.getMembers();
+		Map<String,Member> members=new TreeMap<>(uo);
 		 log.log(Level.FINE, "Processing GET request:  " + members.size() + " members loaded.");
 		
 		// Send contacts to index.jsp

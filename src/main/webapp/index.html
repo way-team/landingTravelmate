@@ -6,51 +6,66 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
   <title>travelmate</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-<style>
-.nav-wrapper {
-  background: linear-gradient(270deg, #74E0D4, #003542); 
-}
-.no-pad-bot {
-  background-color: #F3FBFF; 
-}
-span{
-padding: 70px;
-}
 
-</style>
+  <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.7.0/d3.min.js"></script>
+  <script type="text/javascript">
+    var clientId = '629541634133-he04a27j7kk0jqj5a8csv1gi1pu4s5ht.apps.googleusercontent.com';
+    var apiKey = 'AIzaSyCXyfEKysr8y05j5ZbpFOeBz-hlkBmTsQA';
+    var scopes = 'https://www.googleapis.com/auth/gmail.compose';
+
+  </script>
+
+  
+
 </head>
+
+
 <body>
-  <nav  role="navigation">
-    <div class="nav-wrapper "><a id="logo-container" href="/" class="brand-logo"><span class="col s12 light"> travelmate</span></a>
+  <nav  role="navigation" id="myHeader">
+    <div class="nav-wrapper"><a id="logo-container" href="/" class="brand-logo"><span class="col s12 light"> travelmate</span></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="/"><span>Landing Page</span></a></li>
-
+        <li><a href="/"><span id="listlink">Landing Page</span></a></li>
       </ul>
-</div>
+    </div>
   </nav>
-  <div class="section no-pad-bot " id="index-banner">
-  <div class="container">
-  <div class="row center">
-   <img src="./images/logo.png" alt="Logo">
-   </div>
 
-      <h1 class="header center" color="#003542">travelmate</h1>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
       <div class="row center">
-        <h5 class="header col s12 light  teal-text text-darken-4">Addicted to travel</h5>
+        <img src="./images/logo.png" alt="Logo">
       </div>
-      
-   
-
+        <h1 class="header center" color="#003542">travelmate</h1>
+        <div class="row center" id="moto">
+          <h5 class="header col s12 light text-darken-4">Addicted to travel</h5>
+        </div>
+    
     </div>
   </div>
 
+  <div class="section" id="formulario">
+    <div class="container">
+      <div class="row" id="innerform">
+        <h1 class="form-title center">Join our Contact List</h1>
+        <h4 class="center" id="subt">Enter your contact information here and we will reach you with news and updates about our application</h4>
+        <form class="formu" method="post" action="https://docs.google.com/forms/d/e/1FAIpQLSeC0jGJVr5Lwi-Pq0eLNADdes3iGtnstZfzu47jsBBUd9noCQ/formResponse">
+          <label id="labform">Name</label>
+          <input type="text" name="entry.1958644593" placeholder="Your Name" id="first_name" required>
+          <label id="labform">Email</label>
+          <input type="email" name="emailAddress" placeholder="Email Address (ex: example@test.com)" id="formemail" required>
+          <label id="labform">Home Location</label>
+          <input type="text" name="entry.1536231601" placeholder="Your City" id="formlocation">
+          <button type="sumbit" id="subbut">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
 
- 
   <footer class="page-footer teal">
     <div class="container">
 
@@ -60,7 +75,9 @@ padding: 70px;
 
 
         </div>
-</div>
+    </div>
+
+
     <div class="footer-copyright">
       <div class="container">
        <a class="teal-text text-lighten-5" href="/">travelmate</a>
@@ -75,6 +92,22 @@ padding: 70px;
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
+
+  <script>
+    window.onscroll = function() {myFunction()};
+    
+    var header = document.getElementById("myHeader");
+    var sticky = header.offsetTop;
+    
+    function myFunction() {
+        if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+        } else {
+        header.classList.remove("sticky");
+        }
+    }
+  </script>
+
 
   </body>
 </html>

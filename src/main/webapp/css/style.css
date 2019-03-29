@@ -1,14 +1,62 @@
-/* Custom Stylesheet */
-/**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */
+
+ .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 
 .icon-block {
   padding: 0 15px;
 }
 .icon-block .material-icons {
 	font-size: inherit;
+}
+
+.row#moto{
+  margin-bottom: 0;
+  padding-bottom: 5rem;
+}
+
+.nav-wrapper {
+  background: linear-gradient(270deg, #74E0D4, #003542); 
+}
+.no-pad-bot {
+  background-color: #F3FBFF; 
+}
+
+#formulario {
+  background-color: #F3FBFF;
+}
+
+#index-banner{
+  background: linear-gradient(270deg, #74E0D4, #003542); 
+  padding-top: 5rem; 
+}
+
+#listlink{
+  color: #003542;
+}
+
+#subt{
+  padding-bottom: 2rem;
+}
+
+#labform{
+  font-size: 1.5rem;
+}
+
+#subbut{
+  background-color: #74E0D4;
+  border: none;
+  padding: 10px 24px;
+  transition-duration: 0.4s;
+}
+
+#subbut:hover{
+  background-color: #74E0D4;
+  color: white;
+}
+
+span{
+padding: 70px;
 }
